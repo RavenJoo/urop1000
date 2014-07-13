@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Wifi Authentication</title>
-	</head>
+#!/usr/bin/perl
 
-	<body>
-		<script>
+# FB Login with CGI
+
+use CGI;
+
+print "Content-type: text/html\n\n";
+
+print <<"EOF";
+<html>
+
+<head>
+<title>Wifi Authentication</title>
+</head>
+
+<body>
+EOF
+
+print qq(
+<script>
 			
-			// The following two blocks
-			// initializes Facebook SDK
       		window.fbAsyncInit = function() {
         		FB.init({
           			appId      : '290884437749394',
@@ -27,7 +37,6 @@
          		fjs.parentNode.insertBefore(js, fjs);
        		}(document, 'script', 'facebook-jssdk'));
        		
-       		<!--
        		function handleLogin(form) {
        			var id = form.id.value;
        			var password = form.password.value;
@@ -42,14 +51,13 @@
        		else {
        			form.addEventListener("submit", handleLogin);
        		}
-       		-->
        		       
-    	</script>
-    	
-    	
+</script>
+)
+
+print <<"EOF2";
     	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 		</fb:login-button>
-		
-		<div class="fb-like" data-href="https://www.facebook.com/uroptest" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
 	</body>
 </html>
+EOF2

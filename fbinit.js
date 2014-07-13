@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Wifi Authentication</title>
-	</head>
-
-	<body>
-		<script>
-			
-			// The following two blocks
-			// initializes Facebook SDK
-      		window.fbAsyncInit = function() {
+window.fbAsyncInit = function() {
         		FB.init({
           			appId      : '290884437749394',
           			status     : true,
@@ -27,7 +16,6 @@
          		fjs.parentNode.insertBefore(js, fjs);
        		}(document, 'script', 'facebook-jssdk'));
        		
-       		<!--
        		function handleLogin(form) {
        			var id = form.id.value;
        			var password = form.password.value;
@@ -42,14 +30,3 @@
        		else {
        			form.addEventListener("submit", handleLogin);
        		}
-       		-->
-       		       
-    	</script>
-    	
-    	
-    	<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-		</fb:login-button>
-		
-		<div class="fb-like" data-href="https://www.facebook.com/uroptest" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-	</body>
-</html>
